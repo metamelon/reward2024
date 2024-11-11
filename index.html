@@ -55,7 +55,7 @@
                 </div>
             </div>
 
-            <!-- 상세 분석 테이블 -->
+            <!-- 상세 분석 테이블 (삭제 예정)-->
             <div class="detailed-analysis">
                 <h3>레벨별 상세 분석</h3>
                 <table id="analysisTable">
@@ -71,22 +71,7 @@
                             <th>재가입필요시점</th>
                         </tr>
                     </thead>
-                    <tbody id="analysisTableBody">
-                        ${levelData.map(level => `
-                            <tr>
-                                <td>${level.level}</td>
-                                <td><input type="number" min="0" value="${level.currentMembers}" 
-                                    id="level${level.level}Members" class="member-input" 
-                                    onchange="updateLevelCalculations(this.id)"></td>
-                                <td id="sales${level.level}">$0</td>
-                                <td id="sponsorBonus${level.level}">$0</td>
-                                <td id="referralBonus${level.level}">$0</td>
-                                <td id="rankBonus${level.level}">$0</td>
-                                <td id="dailyBonus${level.level}">$0/일</td>
-                                <td id="requalification${level.level}">-</td>
-                            </tr>
-                        `).join('')}
-                    </tbody>
+
                 </table>
             </div>
         </section>

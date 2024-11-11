@@ -241,6 +241,7 @@ const calculateTotalBonuses = () => {
     }, 0);
 };
 
+// 레벨별 상세 분석 로직(삭제 예정)
 const updateDetailedAnalysis = () => {
     levelData.forEach((level, index) => {
         const members = parseInt(document.getElementById(`level${level.level}Members`).value) || 0;
