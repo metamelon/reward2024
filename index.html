@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MLM 시스템 분석기</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>MLM 시스템 분석기</h1>
+        
+        <!-- 입력 섹션 -->
+        <section class="input-section">
+            <h2>레벨별 데이터 입력</h2>
+            <div class="level-inputs">
+                <table id="levelInputTable">
+                    <thead>
+                        <tr>
+                            <th>레벨</th>
+                            <th>회원 수</th>
+                            <th>가입비 ($)</th>
+                            <th>현재 회원수</th>
+                        </tr>
+                    </thead>
+                    <tbody id="levelInputBody">
+                        <!-- JavaScript로 동적 생성됨 -->
+                    </tbody>
+                </table>
+            </div>
+            <button id="calculateBtn">분석 시작</button>
+        </section>
+
+        <!-- 분석 결과 섹션 -->
+        <section class="results-section">
+            <h2>분석 결과</h2>
+            <div class="results-grid">
+                <div class="result-card">
+                    <h3>전체 요약</h3>
+                    <div id="totalSummary">
+                        <p>총 회원수: <span id="totalMembers">0</span>명</p>
+                        <p>총 매출: $<span id="totalSales">0</span></p>
+                        <p>총 지급 수당: $<span id="totalBonuses">0</span></p>
+                        <p>회사 순수익: $<span id="companyProfit">0</span></p>
+                    </div>
+                </div>
+                
+                <div class="result-card">
+                    <h3>리스크 평가</h3>
+                    <div id="riskAssessment">
+                        <p>리스크 레벨: <span id="riskLevel">-</span></p>
+                        <p>예상 지급가능 기간: <span id="sustainabilityPeriod">-</span></p>
+                        <p>권장 회원모집 속도: <span id="recommendedRecruitmentRate">-</span></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 상세 분석 테이블 -->
+            <div class="detailed-analysis">
+                <h3>레벨별 상세 분석</h3>
+                <table id="analysisTable">
+                    <thead>
+                        <tr>
+                            <th>레벨</th>
+                            <th>회원수</th>
+                            <th>매출</th>
+                            <th>후원수당</th>
+                            <th>추천보너스</th>
+                            <th>직급보너스</th>
+                            <th>데일리수당</th>
+                            <th>재가입필요시점</th>
+                        </tr>
+                    </thead>
+                    <tbody id="analysisTableBody">
+                        <!-- JavaScript로 동적 생성됨 -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+            
+        <h1>데이터 분석</h1>
+        <div id="analysisResults"></div>
+        <div id="warningMessage" class="warning-message"></div>
+
+
+        
+    </div>
+    <script src="app.js"></script>
+</body>
+</html>
