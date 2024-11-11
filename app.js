@@ -241,7 +241,6 @@ const calculateTotalBonuses = () => {
     }, 0);
 };
 
-// 레벨별 상세 분석 테이블  업데이트(수정)
 const updateDetailedAnalysis = () => {
     levelData.forEach((level, index) => {
         const members = parseInt(document.getElementById(`level${level.level}Members`).value) || 0;
@@ -253,6 +252,9 @@ const updateDetailedAnalysis = () => {
             currentMembers: members,
             ...calculations
         };
+        
+        // 화면 업데이트
+        updateLevelCalculations(`level${level.level}Members`);
     });
     
     // 전체 요약 업데이트
