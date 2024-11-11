@@ -72,7 +72,20 @@
                         </tr>
                     </thead>
                     <tbody id="analysisTableBody">
-                        <!-- JavaScript로 동적 생성됨 -->
+                        ${levelData.map(level => `
+                            <tr>
+                                <td>${level.level}</td>
+                                <td><input type="number" min="0" value="${level.currentMembers}" 
+                                    id="level${level.level}Members" class="member-input" 
+                                    onchange="updateLevelCalculations(this.id)"></td>
+                                <td id="sales${level.level}">$0</td>
+                                <td id="sponsorBonus${level.level}">$0</td>
+                                <td id="referralBonus${level.level}">$0</td>
+                                <td id="rankBonus${level.level}">$0</td>
+                                <td id="dailyBonus${level.level}">$0/일</td>
+                                <td id="requalification${level.level}">-</td>
+                            </tr>
+                        `).join('')}
                     </tbody>
                 </table>
             </div>
