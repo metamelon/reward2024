@@ -372,5 +372,3 @@ setInterval(() => {
         checkRequalificationNeeds();
     }
 }, 5000);
-
-//왜 안바뀌는거지? 모지??
